@@ -16,8 +16,18 @@
         <div class="logo">
           <h2>OpenAI Image Genrator</h2>
         </div>
+
         <div class="nav-links">
           <ul>
+            <% if (!user) { %>
+              <li>
+                <a href="/auth/google">Login with Google</a>
+              </li>
+            <% } else { %>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            <% } %>
             <li>
               <a href="https://beta.openai.com/docs" target="_blank"
                 >OpenAI API Docs</a
@@ -25,8 +35,6 @@
             </li>
           </ul>
         </div>
-      </div>
-    </header>
 
     <main>
       <section class="showcase">
